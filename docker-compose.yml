@@ -23,15 +23,15 @@ services:
     volumes:
       - ${WWW_DOCUMENT_ROOT}/:/app
 
-  nginx:
-    image: bitnami/nginx:1.20
-    container_name: nginx
+  apache:
+    image: bitnami/apache:2.4
+    container_name: apache
     restart: always
     ports:
       - 8080:8080
+      - 443:443
     volumes:
-      - ./nginx/logs:/opt/bitnami/nginx/logs/
-      - ./nginx/server-blocks/default.conf:/opt/bitnami/nginx/conf/server_blocks/default.conf:ro
+      - ./apache-vhosts/httpd.conf:/vhosts/httpd.conf:ro
       - ${WWW_DOCUMENT_ROOT}/:/app
     depends_on:
       - mariadb

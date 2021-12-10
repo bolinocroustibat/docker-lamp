@@ -1,11 +1,11 @@
-# LEMP ((Linux) + (E)nginx + MariaDB + PHP) Docker stack for local web development
+# LAMP ((Linux) + Apache + MariaDB + PHP) Docker stack for local web development
 
 A docker-compose stack for local web development, which includes:
-- Nginx 1.20
+- Apache 2.4
 - MariaDB 10.5
 - PHP 7.4
 
-There is also a LAMP (Apache + MariaDB + PHP) Docker stack available [on this branch](https://github.com/bolinocroustibat/docker-lemp/tree/lamp).
+There is also a LEMP (Nginx + MariaDB + PHP) Docker stack available [on this branch](https://github.com/bolinocroustibat/docker-lemp/tree/main).
 
 
 ## How to run
